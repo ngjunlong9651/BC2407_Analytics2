@@ -63,5 +63,4 @@ print('RMSE: %.2f' % math.sqrt(mean_squared_error(target_y, y_pred)))
 print('R^2: %.2f' % r2_score(target_y, y_pred))
 print("Model Coefficient: %.2f" % lin_reg.coef_)
 
-
 lin_reg.coef_
