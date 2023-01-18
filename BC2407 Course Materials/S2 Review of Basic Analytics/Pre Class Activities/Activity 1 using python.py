@@ -10,8 +10,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import math
 
-import warnings
-warnings.filterwarnings("ignore")
 
 ## Importing the data
 df = pd.read_csv("/Users/junlongng/Desktop/NTU/Year_2/Semester 2/BC2407 Analytics II/BC2407 Course Materials/S2 Review of Basic Analytics/resale-flat-prices-2019.csv")
@@ -44,7 +42,7 @@ target_y = df['resale_price']
 x_cat = pd.get_dummies(x_cat, columns=['storey_range'])
 del x_cat['storey_range_01 TO 03']
 x_cat = pd.get_dummies(x_cat, columns=['town'])
-del x_cat['town_YISHUN'] # set as baseline reference, relevel() equivalent in R
+del x_cat['town_YISHUN'] # set as baseline reference, it is the same as using relevel() in R
 x_cat.head()
 
 
